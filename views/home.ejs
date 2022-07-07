@@ -1,0 +1,82 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <h1>Learn to code for free</h1>
+    <h2>Get your feet wet and set out for an adventure!</h2>
+    <% if(user){ %> 
+    <div class="get_started"><a href="/courses" class="btn">Get Started</a></div>
+    <% }else{ %>
+    <div class="get_started"><a href="/login" class="btn">Get Started</a></div> 
+    <% } %>      
+</header>
+
+<div class="info_section">
+   <div class="info_container container-flex">
+        <div class="info_image">
+            <img src="/info_image1.svg" alt="">
+        </div>
+        <div class="info_text">
+            <h1>Take your first steps into the world of Coding and Development</h1>
+            <h2>That's one small step for man, one giant leap for mankind.</h2>
+        </div>
+   </div>
+</div>
+
+<div class="info_section">
+    <div class="info_container container-flex">
+         
+         <div class="info_text">
+             <h1>Join us today!</h1>
+             <h2>Sign up for free and start learning along with your fellow Gakushū-sha</h2>
+         </div>
+         <div class="info_image">
+             <img src="info_image2.svg" alt="">
+        </div>
+    </div>
+ </div>
+
+<div class="info_section">
+    <div class="info_container container-flex">
+         <div class="info_image">
+            <img src="info_image3.svg" alt="">
+         </div>
+         <div class="info_text">
+             <h1>Front end Journey</h1>
+             <h2>Intrested to know how this website was setup? Then this is just the course to get you started</h2>
+         </div>
+    </div>
+</div> 
+
+<div class="info_section">
+    <div class="info_container container-flex">
+         
+         <div class="info_text">
+             <h1>Breaking the code</h1>
+             <h2>Also get introduced to programming languages like Java and Python</h2>
+         </div>
+         <div class="info_image">
+            <img src="info_image4.svg" alt="">
+         </div>
+    </div>
+</div> 
+
+<div class="info_section">
+    <div class="info_container container-flex">
+         <div class="info_image">
+            <img src="info_image5.svg" alt="">
+         </div>
+         <div class="info_text">
+             <h1>So what are you waiting for?</h1>
+             <h2>Join us now and level up</h2>
+         </div>
+    </div>
+</div> 
+
+<% if(!user) { %> 
+<section>
+<div class="get_started"><a href="/signup" class="btn">Sign Up</a></div>
+</section>
+
+<% } %> 
+
+<%- include('partials/footer'); -%>

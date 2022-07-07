@@ -1,0 +1,102 @@
+<%- include('partials/header'); -%>
+
+<div class="back_to_courses container-flex">
+    <a href="/courses" class="backtrack"><img src="go_back.png" alt=""></a>
+    <a href="/courses" class="btn">Courses</a>
+</div>
+
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Object Oriented Programming</h1>
+    <h2>This a course that goes hand in hand with HTML</h2>
+    <h3>Now that we have learnt HTML we need to learn how to style the webpages we create.
+      Let's get started
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+    <!-- intro to OOP -->
+  <div class="video_container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/SiBw7os-_zI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Java</h1>
+    <h2>Java tutorial for beginners </h2>
+    <h3>Learn Java, the language behind millions of apps and websites.
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+    <!-- JAVA FOR BEG -->
+  <div class="video_container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/eIrMbAQSU34"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Extra Resources</h1>
+    <h2>Java Programming playlist</h2>
+    <h3>This is nother playlist curated to learn programming in Java.
+      Take your time, go through the playlist as you find convenient.
+    </h3>
+    
+    <div class="flag">
+      Mark as complete
+    </div>
+
+  </div>
+    <!-- JAVA PLAYLIST -->
+  <div class="video_container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/videoseries?list=PL_c9BZzLwBRKIMP_xNTJxi9lIgQhE51rF"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<script>
+  const button=document.getElementsByClassName('flag');
+    
+  for(var i=0;i<button.length;i++){
+    button[i].addEventListener('click',markCourse)
+  }
+
+  function markCourse(e){
+  
+
+    e.target.style.background="green";
+    e.target.textContent="Completed";
+    e.target.style.color="white";
+  }
+</script>
+
+<%- include('partials/footer'); -%>

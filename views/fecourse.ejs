@@ -1,0 +1,131 @@
+<%- include('partials/header'); -%>
+
+<div class="back_to_courses container-flex">
+  <a href="/courses" class="backtrack"><img src="go_back.png" alt="" /></a>
+  <a href="/courses" class="btn">Courses</a>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>HTML</h1>
+    <h2>Get started with a beginners' course for HTML</h2>
+    <h3>
+      So lets get started with your journey to become a front end developer
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+  <!-- HTML -->
+  <div class="video_container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>CSS</h1>
+    <h2>This a course that goes hand in hand with HTML</h2>
+    <h3>
+      Now that we have learnt HTML we need to learn how to style the webpages we
+      create. <br />
+      Let's get started
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+  <!-- CSS -->
+  <div class="video_container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>CSS Flexbox</h1>
+    <h2>This a course that goes hand in hand with HTML</h2>
+    <h3>
+      Now that we have learnt HTML we need to learn how to style the webpages we
+      create. <br />
+      Let's get started
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+  <!-- FLEXBOX -->
+  <div class="video_container">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/videoseries?list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex
+">
+  <!-- JS -->
+  <div class="course_text">
+    <h1>JavaScript</h1>
+    <h2>Now its time to add some functionality to your static webpages</h2>
+    <h3>
+      Watch this JavaScript tutorial for beginners to learn JavaScript basics in
+      one hour.
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+  <div class="video_container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W6NZfCO5SIk" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+</div>
+
+<div class="iframe_container container-flex
+">
+  <!-- JS -->
+  <div class="course_text">
+    <h1>More about JavaScript</h1>
+    <h2>Learn JavaScript in some more depth</h2>
+    <h3>
+      This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know about the
+      JavaScript programming language.
+    </h3>
+    <div class="flag">
+      Mark as complete
+    </div>
+  </div>
+  <div class="video_container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe></div>
+
+</div>
+
+<script>
+  const button = document.getElementsByClassName('flag');
+
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', markCourse)
+  }
+
+  function markCourse(e) {
+
+
+    e.target.style.background = "green";
+    e.target.textContent = "Completed";
+    e.target.style.color = "white";
+  }
+</script>
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,27 @@
+<%- include('partials/header'); -%>
+
+<form action="/addtask" method="post">
+    <h2>Add Task</h2>
+    <label for="title">Title</label>
+    <input type="text" name="title" required autocomplete="off"/>
+    <div class="title error"></div>
+    <label for="body">Body</label>
+    
+    <textarea name="body" id="" cols="50" required resizable="false" rows="10"></textarea>
+    <div class="body error"></div>
+    <label for="status">Status</label>
+    
+    <input type="checkbox" name="status" id="" style="width: fit-content;"> <label for="" style="width: fit-content; display: inline;">Completed</label>
+    <div class="status error"></div>
+  
+    <label for="deadline">Deadline</label>
+    
+    <input type="date" name="deadline" id="">
+    <div class="deadline error"></div>
+  
+    <input type="submit" value="submit" class="submit_task">
+  </form>
+
+ 
+
+<%- include('partials/footer'); -%>

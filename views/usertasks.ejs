@@ -1,0 +1,58 @@
+<%- include('partials/header'); -%>
+
+<div class="task content">
+    <h1><i class="fas fa-tasks"></i> Tasks</h1>
+
+    <% if (tasks.length > 0) { %>
+        <% tasks.forEach(task => { %>
+          <h2 class="title"><%= task.title %></h2>
+          <h3><%= task.body %></h3>
+          <p class="status">Completed status: <%= task.status %></p>
+          <p class="deadline" >Deadline: <%= task.deadline  %> </p>
+
+
+          <a class="update" data-doc="<%= task.id  %> "><div class="modify">Update</div></a>
+
+
+          <a class="delete" data-doc="<%= task.id  %> "><div  class="modify">Delete</div></a>
+          
+          
+          <br>
+          <hr style="margin-top: 1rem;">
+        <% }) %>
+      <% } else { %>
+        <p>There are no tasks assigned...</p>
+      <% } %>
+      <a href="/addtask"><div class="add_task">+ Add Task</div></a>
+</div>
+
+    <script>
+      const trash = document.querySelector('a.delete');
+      const upstat= document.querySelector('a.update');
+
+
+
+      trash.addEventListener('click',(e)=>{
+        const endpoint = `/usertasks/${trash.dataset.doc}`;
+
+        fetch(endpoint,{
+          method: 'DELETE'
+        })
+        .then((response)=> response.json())
+        .then((data)=> window.location.href=data.redirect)
+        .catch((err) => {console.log(err)});
+      })
+
+      upstat.addEventListener('click',(e)=>{
+        const endpoint = `/usertasks/${upstat.dataset.doc}`;
+
+        fetch(endpoint,{
+          method: 'PUT'
+        })
+        .then((response)=> response.json())
+        .then((data)=> window.location.href=data.redirect)
+        .catch(err => console.log(err));
+      })     
+    </script>
+
+<%- include('partials/footer'); -%>
